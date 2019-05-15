@@ -1,0 +1,839 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/customization/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Tugas Data Mining</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#k-means-clustering-pada-data-iris" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Tugas Data Mining
+            </span>
+            <span class="md-header-nav__topic">
+              K-Means
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/ianfyan/170441100041_ImamKurfian" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    nfyan/170441100041_ImamKurfian
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Material" class="md-tabs__link md-tabs__link--active">
+        Data Mining
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../extensions/admonition/" title="Extensions" class="md-tabs__link">
+          Extensions
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Tugas Data Mining
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ianfyan/170441100041_ImamKurfian
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Material" class="md-nav__link">
+      KNN
+    </a>
+  </li>
+
+    
+      
+      
+
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/admonition/" title="Admonition" class="md-nav__link">
+      Admonition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/codehilite/" title="CodeHilite" class="md-nav__link">
+      CodeHilite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/footnotes/" title="Footnotes" class="md-nav__link">
+      Footnotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/metadata/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/permalinks/" title="Permalinks" class="md-nav__link">
+      Permalinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extensions/pymdown/" title="PyMdown" class="md-nav__link">
+      PyMdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        K-Means
+      </label>
+    
+    <a href="./" title="Customization" class="md-nav__link md-nav__link--active">
+      K-Means
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-definisi-k-means" title="A. Definisi K-Means" class="md-nav__link">
+    A. Definisi K-Means
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-konsep-k-means" title="B. Konsep K-Means" class="md-nav__link">
+    B. Konsep K-Means
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-kelebihan-dan-kekurangan" title="C. Kelebihan dan Kekurangan" class="md-nav__link">
+    C. Kelebihan dan Kekurangan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-kelebihan" title="a) Kelebihan" class="md-nav__link">
+    a) Kelebihan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-kekurangan" title="b) kekurangan" class="md-nav__link">
+    b) kekurangan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-langkah-langkah-clustering-k-means-di-excel" title="D. Langkah-langkah Clustering K-Means di Excel" class="md-nav__link">
+    D. Langkah-langkah Clustering K-Means di Excel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-langkah-langkah-menghitung-silhouette-coefficient" title="E. Langkah-langkah menghitung Silhouette Coefficient :" class="md-nav__link">
+    E. Langkah-langkah menghitung Silhouette Coefficient :
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-definisi-k-means" title="A. Definisi K-Means" class="md-nav__link">
+    A. Definisi K-Means
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-konsep-k-means" title="B. Konsep K-Means" class="md-nav__link">
+    B. Konsep K-Means
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-kelebihan-dan-kekurangan" title="C. Kelebihan dan Kekurangan" class="md-nav__link">
+    C. Kelebihan dan Kekurangan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-kelebihan" title="a) Kelebihan" class="md-nav__link">
+    a) Kelebihan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-kekurangan" title="b) kekurangan" class="md-nav__link">
+    b) kekurangan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-langkah-langkah-clustering-k-means-di-excel" title="D. Langkah-langkah Clustering K-Means di Excel" class="md-nav__link">
+    D. Langkah-langkah Clustering K-Means di Excel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-langkah-langkah-menghitung-silhouette-coefficient" title="E. Langkah-langkah menghitung Silhouette Coefficient :" class="md-nav__link">
+    E. Langkah-langkah menghitung Silhouette Coefficient :
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="k-means-clustering-pada-data-iris"><strong>K-Means Clustering pada Data Iris</strong><a class="headerlink" href="#k-means-clustering-pada-data-iris" title="Permanent link">&para;</a></h1>
+<h4 id="a-definisi-k-means">A. Definisi K-Means<a class="headerlink" href="#a-definisi-k-means" title="Permanent link">&para;</a></h4>
+<p>K-Means adalah salah satu algoritma clustering atau metode pengelompokan data dengan sistem partisi dan menerima masukan data tanpa label kelas. Dimana data dikelompokkan ke dalam beberapa kelompok sehingga data dalam satu kelompok (cluster) memiliki karakteristik yang sama satu sama lainnya dan mempunyai karakteristik yang berbeda dengan data yang berada di dalam kelompok (cluster) yang lain. Pada setiap cluster terdapat titik pusat (centroid) yang merepresentasikan cluster tersebut. Algoritma ini mengelompokkan data berdasarkan kemiripan dari fiturnya. Ciri khas dari algortima ini adalah mendefinisikan terlebih dahulu berapa jumlah cluster yang akan didapatkan dan berapa jumlah iterasi untuk algoritma ini.</p>
+<h4 id="b-konsep-k-means">B. Konsep K-Means<a class="headerlink" href="#b-konsep-k-means" title="Permanent link">&para;</a></h4>
+<p>Metode K-Means Clustering berusaha mengelompokkan data yang ada ke dalam beberapa kelompok, dimana data dalam satu kelompok mempunyai karakteristik yang sama satu sama lainnya dan mempunyai karakteristik yang berbeda dengan data yang ada di dalam kelompok yang lain.</p>
+<p>Dengan kata lain, metode K-Means Clustering bertujuan untuk meminimalisasikan objective function yang diset dalam proses clustering dengan cara meminimalkan variasi antar data yang ada di dalam suatu cluster dan memaksimalkan variasi dengan data yang ada di cluster lainnya.</p>
+<p><img alt="material for mkdocs" src="../assets/images/gam.jpg" /></p>
+<p>Data clustering menggunakan metode <strong>K-Means Clustering</strong> ini secara umum dilakukan dengan algoritma dasar sebagai berikut:</p>
+<ol>
+<li>Tentukan jumlah cluster</li>
+<li>Alokasikan data ke dalam cluster secara random</li>
+<li>Hitung centroid/rata-rata dari data yang ada di masing-masing cluster</li>
+<li>Alokasikan masing-masing data ke centroid/rata-rata terdekat</li>
+<li>Kembali ke Step 3, apabila masih ada data yang berpindah cluster atau apabila perubahan nilai centroid, ada yang di atas nilai threshold yang ditentukan atau apabila perubahan nilai pada objective function yang digunakan di atas nilai threshold yang ditentukan</li>
+<li></li>
+</ol>
+<h4 id="c-kelebihan-dan-kekurangan">C. Kelebihan dan Kekurangan<a class="headerlink" href="#c-kelebihan-dan-kekurangan" title="Permanent link">&para;</a></h4>
+<h5 id="a-kelebihan">a) Kelebihan<a class="headerlink" href="#a-kelebihan" title="Permanent link">&para;</a></h5>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mudah untuk diimplementasikan dan dijalankan</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Waktu yang dibutuhkan untuk menjalankan pembelajaran ini relatif cepat</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mudah untuk diadaptasi</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Umum digunakan</li>
+</ul>
+<h5 id="b-kekurangan">b) kekurangan<a class="headerlink" href="#b-kekurangan" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>pengelompokan data yang dihasilkan berbeda-beda karena k buah titik (titik pusat) diinisialisasi secara <em>random.</em>  Jika nilai random untuk inisialisasi kurang baik, maka pengelompokkan yang dihasilkan juga kurang optimal.</p>
+</li>
+<li>
+<p>Terdapat banyak dimensi dalam mencari jarak antar titik jika . Seperti jika mencari jarak antar titik jika terdapat 20 dimensi.</p>
+</li>
+<li>
+<p>Membutuhkan waktu perhitungan dan pencarian titik terdekat yang lama jika terdapat titik sampel data  yang banyak misal satu milyar buah data.</p>
+</li>
+</ul>
+<h4 id="d-langkah-langkah-clustering-k-means-di-excel">D. Langkah-langkah Clustering K-Means di Excel<a class="headerlink" href="#d-langkah-langkah-clustering-k-means-di-excel" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Disini saya menggunakan data Iris, tetapi saya hanya mengambil 5 data dari tiap kelas jadi total data yang akan diclustering ada 15 data.</li>
+</ol>
+<p><img alt="material for mkdocs" src="../assets/images/dm.PNG" /></p>
+<ol>
+<li>Menentukan banyaknya cluster yang dibentuk (k) dimana banyaknya cluster harus lebih kecil dari banyaknya data (k&lt;n). Inisialisasi secara acak (random) K titik data sebagai pusat cluster yang disebut centroid</li>
+</ol>
+<p><img alt="material for mkdocs" src="../assets/images/dm1.PNG" /></p>
+<ol>
+<li>Menandai masing-masing <em>xi</em> masuk ke masing-masing pusat cluster tertentu dengan cara menghitung jarak <em>xi</em> ke masing-masing pusat cluster (centroid). Setelah itu kelompokkan data sesuai clusternya
+   masing-masing dengan cara memilih data yang memiliki jarak terdekat atau terpendek dengan cluster lainnya. Rumus untuk menghitung distance space dengan menggunakan Euclidiean Distance.</li>
+</ol>
+<p><img alt="material for mkdocs" src="../assets/images/euclidean-distance.jpg" /></p>
+<p>Cara menghitung jaraknya seperti di bawah ini :</p>
+<ul>
+<li>Menghitung jarak pada baris 1 dengan pusat cluster/centroid pertama (c1). Dimana mengambil data IRIS baris pertama di kurangi jumlah centroid pertama (c1) seperti contoh di bawah ini. </li>
+</ul>
+<p>​                               D(<em>x1,c1</em>) = √(5.1 – 5.1)² + (3.5 – 3.5)² + (1.4 – 1.4)² + (0.2 – 0.2)²</p>
+<ul>
+<li>Menghitung jarak pada baris 1 dengan pusat cluster/centroid kedua (c2). </li>
+</ul>
+<p>​                                D(x1,c2) = √(5.1 – 5.4)² + (3.5 – 3.9)² + (1.4 – 1.7)² + (0.2 – 0.4)²</p>
+<ul>
+<li>Menghitung jarak pada baris 1 dengan pusat cluster/centroid ketiga (c3).</li>
+</ul>
+<p>​                               D(x1,c3) = √(5.1 – 5.4)² + (3.5 – 3.7)² + (1.4 – 1.5)² + (0.2 – 0.2)²</p>
+<ul>
+<li>Menghitung jarak pada baris 1 dengan pusat cluster/centroid ketiga (c4).</li>
+</ul>
+<p>​                               D(x1,c4) = √(5.1 – 5.7)² + (3.5 – 4.4)² + (1.4 – 1.5)² + (0.2 – 0.4)²</p>
+<ul>
+<li>Berikut ini adalah hasil Iterasi 1 :</li>
+</ul>
+<p><img alt="material for mkdocs" src="../assets/images/dm2.PNG" /></p>
+<ol>
+<li>Menentukan pusat cluster baru dengan menghitungnya dengan rata-rata dari anggota cluster. Seperti pada gambar di atas pada cluster 1 anggotanya (1,2,3,4,5,7,8,9,10,12,13,14,18), cluster 2 anggotanya (6,19) dan cluster 3 anggotanya (11,17,20), cluster 4 anggotanya (15,16)</li>
+</ol>
+<p>Berikut ini hasil perhitungan centroid baru :</p>
+<p><img alt="material for mkdocs" src="../assets/images/dm6.PNG" /></p>
+<ol>
+<li>Ulangi langkah 2 dan 3 sampai tidak ada anggota setiap cluster berubah tempat kelompoknya</li>
+</ol>
+<p><img alt="material for mkdocs" src="../assets/images/dm10.PNG" /></p>
+<p>Hasil antara iterasi 1 dan iterasi 2 terdapat anggota cluster yang berpindah tempat. Maka akan dilakukan iterasi berikutnya sampai tidak ada cluster yang berubah tempat kelompoknya.</p>
+<ol>
+<li>pada saat ini, centroid tidak berubah di iterasi 4 jadi iterasi sudah selesai. berikut Hasil Centroid baru untuk iterasi 4 :</li>
+</ol>
+<p><img alt="material for mkdocs" src="../assets/images/dm12.PNG" /></p>
+<p>berikut hasil akhir iterasi :</p>
+<p><img alt="material for mkdocs" src="../assets/images/dm11.PNG" /></p>
+<p><strong>D. Menghitung Jumlah Cluster</strong> </p>
+<ol>
+<li>
+<p>Menentukan jarak Intra</p>
+<p>Jarak Intra cluster =<img alt="material for mkdocs" src="../assets/images/clip_image001.png" /></p>
+<p>Menghitung jarak Intra (x1-c1)² dengan excel :</p>
+<p><img alt="material for mkdocs" src="../assets/images/dm14.PNG" /></p>
+<p>Begitu juga untuk perhitungan berikutnya sampai (<em>x15-c3</em>)². Hasil dari perhitungannya sebagai berikut :</p>
+<p><img alt="material for mkdocs" src="../assets/images/dm13.PNG" /></p>
+<p><img alt="material for mkdocs" src="../assets/images/dm16.PNG" /></p>
+</li>
+<li>
+<p>Menentukan jarak Inter</p>
+<p>Jarak Inter-cluster = min  (zi –zj)2</p>
+<p><img alt="material for mkdocs" src="../assets/images/dm15.PNG" /></p>
+<p>Menghitung (c1-c2)² dengan excel yaitu dengan mengurangi anggota cluster 1 dan cluster 2 :</p>
+<p><img alt="material for mkdocs" src="../assets/images/dm17.PNG" /></p>
+<p><img alt="material for mkdocs" src="../assets/images/dm16.PNG" /></p>
+</li>
+<li>
+<p>Menentukan Validity (Jumlah Cluster) </p>
+<p><img alt="material for mkdocs" src="../assets/images/Picture1.png" /></p>
+<p><img alt="material for mkdocs" src="../assets/images/dm19.PNG" /></p>
+</li>
+</ol>
+<p>#####    E. Menghitung metode <em>Silhouette Coefficient</em></p>
+<p>​        Daftar anggota tiap Cluster :</p>
+<p>​                                        <img alt="material for mkdocs" src="../assets/images/dm20.PNG" />  </p>
+<p><img alt="material for mkdocs" src="../assets/images/dm22.PNG" /></p>
+<p><img alt="   material for mkdocs" src="../assets/images/dm23.PNG" /></p>
+<h4 id="e-langkah-langkah-menghitung-silhouette-coefficient">E. Langkah-langkah menghitung Silhouette Coefficient :<a class="headerlink" href="#e-langkah-langkah-menghitung-silhouette-coefficient" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Silhouette Coefficient Cluster 1 :</p>
+</li>
+<li>
+<p>Menghitung a(i)</p>
+<p>yaitu jarak pada anggota dalam satu cluster yang sama</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca.PNG" /></p>
+<p>Menghitung  a(i) di excel :</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca3.PNG" /></p>
+</li>
+<li>
+<p>Menghitung b(i)</p>
+<p>yaitu jarak antara anggota cluster satu dengan cluster yang lain dimana mencari mencari nilai yang paling kecil (minimum)</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca1.PNG" /></p>
+<p>Menghitung jarak 1 dengan cluster 2:</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca4.PNG" /></p>
+<p>Menghitung b(i) di excel :</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca5.PNG" /></p>
+</li>
+<li>
+<p>Menentukan s(i)</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca2.PNG" /></p>
+<p>Menghitung s(i) di excel :</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca6.PNG" /></p>
+<p>Hasil Silhouette Coefficient Cluster 1 :</p>
+</li>
+</ul>
+<p><img alt="material for mkdocs" src="../assets/images/ca7.PNG" /></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Silhouette Coefficient Cluster 2 :</li>
+</ul>
+<p>Caranya seperti pada menghitung Silhouette Coefficient Cluster 1. Hasil Silhouette Coefficient Cluster 2:</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca8.PNG" /></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Silhouette Coefficient Cluster 3 :</li>
+</ul>
+<p>Hasil Silhouette Coefficient cluster 4:</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca9.PNG" /></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Silhoutte Coeficient Cluster 4</li>
+</ul>
+<p>Hasil Silhouette Coefficient cluster 4:</p>
+<p><img alt="material for mkdocs" src="../assets/images/ca10.PNG" /></p>
+<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; Imam Kurfian
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://github.com/ianfyan/170441100041_ImamKurfian/">
+          Imam Kurfian</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8c0d971c.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
