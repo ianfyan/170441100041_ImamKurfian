@@ -13,7 +13,7 @@
         <meta name="description" content="Data Mining">
       
       
-        <link rel="canonical" href="https://ianfyan.github.io/170441100041_ImamKurfian/specimen/">
+        <link rel="canonical" href="https://ianfyan.github.io/170441100041_ImamKurfian/decision_tree/">
       
       
         <meta name="author" content="Imam Kurfian">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Decision Tree menggunakan Sklearn - Data Mining</title>
+        <title>Decision Tree - Data Mining</title>
       
     
     
@@ -158,7 +158,7 @@
               Data Mining
             </span>
             <span class="md-header-nav__topic">
-              Decision Tree menggunakan Sklearn
+              Decision Tree
             </span>
           
         </div>
@@ -314,11 +314,200 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../decision_tree/" title="Decision Tree" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Decision Tree
+      </label>
+    
+    <a href="./" title="Decision Tree" class="md-nav__link md-nav__link--active">
       Decision Tree
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian-decision-tree" title="Pengertian Decision Tree" class="md-nav__link">
+    Pengertian Decision Tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konsep-decision-tree" title="Konsep Decision Tree" class="md-nav__link">
+    Konsep Decision Tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-decision-tree" title="Algoritma Decision Tree" class="md-nav__link">
+    Algoritma Decision Tree
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gini-index" title="Gini Index" class="md-nav__link">
+    Gini Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-gain" title="Information Gain" class="md-nav__link">
+    Information Gain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kelebihan-dan-kekurangan" title="Kelebihan Dan Kekurangan" class="md-nav__link">
+    Kelebihan Dan Kekurangan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kelebihan" title="Kelebihan" class="md-nav__link">
+    Kelebihan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kekurangan" title="Kekurangan" class="md-nav__link">
+    Kekurangan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-program" title="Implementasi Program" class="md-nav__link">
+    Implementasi Program
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-library" title="Import Library" class="md-nav__link">
+    Import Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-dataset" title="Load Dataset" class="md-nav__link">
+    Load Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memilah-data" title="Memilah Data" class="md-nav__link">
+    Memilah Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tampil-hasil-pemilahan-data" title="Tampil Hasil Pemilahan Data" class="md-nav__link">
+    Tampil Hasil Pemilahan Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prediksi-data-menggunakan-library-scikit-lear-metode-decision-tree-entropy" title="Prediksi Data Menggunakan Library scikit lear metode Decision Tree Entropy" class="md-nav__link">
+    Prediksi Data Menggunakan Library scikit lear metode Decision Tree Entropy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menampilkan-pohon-data" title="Menampilkan Pohon Data" class="md-nav__link">
+    Menampilkan Pohon Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menampilkan-hasil-prediksi-data-entropy" title="Menampilkan Hasil Prediksi Data Entropy" class="md-nav__link">
+    Menampilkan Hasil Prediksi Data Entropy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prediksi-data-menggunakan-library-scikit-lear-metode-decision-tree-gini" title="Prediksi Data Menggunakan Library scikit lear metode Decision Tree Gini" class="md-nav__link">
+    Prediksi Data Menggunakan Library scikit lear metode Decision Tree Gini
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menampilkan-pohon-data_1" title="Menampilkan Pohon Data" class="md-nav__link">
+    Menampilkan Pohon Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menampilkan-hasil-prediksi-data-gini" title="Menampilkan Hasil Prediksi Data Gini" class="md-nav__link">
+    Menampilkan Hasil Prediksi Data Gini
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi" title="Referensi" class="md-nav__link">
+    Referensi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -752,6 +941,27 @@ print(&quot;Accuracy:&quot;,metrics.accuracy_score(prediction_gini,Y_validation)
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../knn/" title="KNN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                KNN
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
